@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MVP - Taverna Virtual</title>
+</head>
+
+<body>
+     <!-- Título e imagem para apresentação da Taverna virtual -->
+    <header>
+        <div class="title">
+            <h2>Taverna Virtual</h2>
+        </div>
+        <div class="banner">
+        </div>
+    </header>
+
+     <!-- Dados para inclusão de nova bebida na taverna -->
+    <section class="newItem">
+        <input type="text" id="newBebida" placeholder="Nome da Bebida">
+        <input type="text" id="newTipo" placeholder="Tipo (ex: Cerveja, Vinho)">
+        <input type="text" id="newAno" placeholder="Ano">
+        <input type="text" id="newCategoria" placeholder="Categoria">
+        <input type="text" id="newProdutor" placeholder="Produtor">
+        <span onclick="newItem()" class="addBtn">Incluir na taverna</span>
+    </section>
+
+    <!-- Tabela contendo bebidas existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>Bebida</th>
+                <th>Tipo</th>
+                <th>Ano</th>
+                <th>Categoria</th>
+                <th>Produtor</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px" alt="Remover"></th>
+            </tr>
+        </table>
+    </section>
+
+
+
+    <!-- Tabela para atualização do ano da bebida -->
+    <section class="updateYear">
+        <h2>Atualização de Ano</h2>
+        <table class="update-table">
+            <tr>
+                <th>ID do Bebida</th>
+                <th>Novo Ano</th>
+            </tr>
+            <tr>
+                <td><input type="number" id="updateBebidaId" placeholder="ID da Bebida"></td>
+                <td><input type="number" id="newYear" placeholder="Novo Ano"></td>
+            </tr>
+        </table>
+    </section>
+
+<!-- Seção para o botão "Atualizar" -->
+<section class="update-button-section">
+    <button onclick="updateYear()" class="update-button">Atualizar</button>
+</section>
+
+<!-- Tabela para adição de notas -->
+    <section class="addNote">
+        <h2>Adicionar Nota</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>ID do Bebida</th>
+                    <th>Texto da Nota</th>
+                    <td><input type="number" id="addNoteBebidaId" placeholder="ID da Bebida"></td>
+                    <td><input type="text" id="addNoteTexto" placeholder="Texto da Nota"></td>
+                </tr>
+            </table>
+            <button onclick="addNote()">Adicionar</button>
+        </div>
+    </section>
+
+<!-- Consulta individual das bebidas da taverna -->
+    <section class="getBebidaInfo">
+        <h2>Consultar Informações da Bebida</h2>
+        <div class="bebida-info-form">
+            <input type="text" id="bebidaName" placeholder="Nome do Bebida">
+            <button onclick="getBebidaInfo()">Consultar</button>
+        </div>
+        <div id="bebidaInfoResult"></div>
+    </section>
+    
+<!-- Adiciona elementos iterativos na página -->
+    <div class="content">
+        <section id="jokesSection" class="jokesSection">
+            <h3>O Taverneiro diz:</h3>
+            <div id="jokesContent"></div>
+        </section>
+        <section id="fantasyImageSection" class="giff">
+            <h3>Expressão dos Clientes:</h3>
+            <img id="fantasyImage" src="" alt="Fantasy Image">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 Taverna Virtual. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
