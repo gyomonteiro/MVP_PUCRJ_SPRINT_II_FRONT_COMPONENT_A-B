@@ -101,5 +101,5 @@ Para encerrar a execução do contêiner, você pode pressionar Ctrl+C no termin
 
 Independente do modo de execução, recomendo estar com o backend rodando para que seja possível performar os testes do frontend com maior consistência, de forma a permitir com que atualizações na página persistam os dados incluídos previamente.
 
-Componente do backend: 
+Componente do backend: https://github.com/gyomonteiro/MVP_PUCRJ_SPRINT_II_FRONT_COMPONENT_A-B.git
 
